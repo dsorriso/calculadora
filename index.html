@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <div style="position: absolute;" class="calculadora">
+
+        <h1 style="border: 2px solid black;box-shadow: 2px 2px 2px black;border-radius: 7px;width: 380px;text-align: center;padding: 4px 0px; top: 40px;position: relative;">CALCULADORA :)</h1>
+        <div style="display: flex;flex-direction: column; text-align: center;position: relative;top: 50%;margin-top: -186px;">
+            <!-- Campo para o primeiro número, com o ID 'num1' -->
+            <p>Número 1</p> <input style="width: 210px; text-align: center;" id="num1" type="number">
+            <!-- Campo para o segundo número, com o ID 'num2' -->
+            <p style="margin-top: 10px;">Número 2</p> <input style="width: 210px; text-align: center;"  id="num2" type="number">
+            <!-- Opções de operação matemática, cada uma com um botão de rádio e um ID correspondente -->
+            <p style="margin-bottom: 5px; margin-top: 20px;">Operações:</p>
+            <select id="operacao" style="width: 210px; text-align: center;">
+                <option class="operacao_options" value="+">Adição</option>
+                <option class="operacao_options" value="-">Subtração</option>
+                <option class="operacao_options" value="/">Divisão</option>
+                <option class="operacao_options" value="*">Multiplicação</option>
+            </select>
+            <div style="text-align: center;" class="buttons">
+                <!-- Botão para iniciar o cálculo, chama a função 'main()' quando clicado -->
+                <button style="width: 135px; margin-bottom: 5px;" onclick="main()">Calcular</button>
+                <!-- Botão para resetar os campos -->
+                <button style="width: 30px;padding: 2px;" onclick="resetar()">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button id="toggle-historico" style="width: 30px;"onclick="toggleHistorico()">
+                    <i style="padding: 2px;" class="fas fa-clock"></i>
+                </button>
+            </div>
+            <!-- Div para exibir o resultado da operação -->
+            <p style="margin-top: 10px;">Resposta:</p> <div id="resp"></div>
+            
+            <!-- Div para exibir o histórico de operações, inicialmente escondida -->
+            <div id="historico-container" style="display: none; margin-top: 10px;">
+                <p style="text-align: center;font-size: large;">Histórico:</p>
+                <div style="font-size: 15px;padding: 10px;" id="historico"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

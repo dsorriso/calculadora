@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: 21px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(184, 184, 184);
+}
+
+.calculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(105, 105, 105);
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 650px;
+    box-shadow: 7px 5px 1px black;
+}
+
+select{
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+button{
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+button:hover, select:hover{
+    background-color: rgb(209, 209, 209);
+    box-shadow: 2px 2px 2px black;
+}
+
+/* Animação ao clicar no botão */
+button:active {
+    transform: scale(0.95);
+    background-color: rgb(150, 150, 150);
+}
+
+.buttons{
+    display: flex;
+    gap: 7px;
+}
+
+
+#num1, #num2{
+    border: 2px solid;
+    box-shadow: 2px 2px 2px;
+    font-size: 30px;
+}
+
+#resp, #historico-container{
+    width: 210px;
+    height: 70px;
+    border: 2px solid black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 1px black;
+    background-color: rgb(85, 85, 85);
+}
+
+input{
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+#historico-container {
+    width: 210px;
+    overflow-y: auto;  /* Adiciona rolagem vertical se o conteúdo exceder a altura */
+    
+}
+
